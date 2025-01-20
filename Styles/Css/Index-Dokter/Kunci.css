@@ -1,0 +1,514 @@
+/* General body and layout styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    background-color: #222831 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #EEEEEE !important;
+    overflow-x: hidden !important;
+}
+
+/* Container for the content */
+#content {
+    padding: 25px !important;
+    margin-left: 250px !important;
+    transition: margin-left 0.3s ease, background-color 0.3s ease !important;
+    background-color: #393E46 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+    min-height: 100vh !important;
+}
+
+/* Title styles */
+#content h1 {
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+    color: #FFD369 !important;
+    margin-bottom: 20px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Paragraph styles */
+#content p {
+    font-size: 1.1rem !important;
+    color: #EEEEEE !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Sidebar styles */
+#sidebar {
+    width: 250px !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: #222831 !important;
+    color: white !important;
+    padding: 20px 25px !important;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.15) !important;
+    z-index: 999 !important;
+    transition: all 0.4s ease-in-out !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+}
+
+/* Sidebar items */
+#sidebar .nav-link {
+    color: #c4c4c4 !important;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+    border-radius: 8px !important;
+    margin-bottom: 12px !important;
+}
+
+#sidebar .nav-link:hover {
+    background-color: #393E46 !important;
+    color: #FFD369 !important;
+}
+
+#sidebar .nav-link i {
+    margin-right: 15px !important;
+    font-size: 1.2rem !important;
+}
+
+/* Sidebar header */
+#sidebar .text-center h4 {
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    color: #FFD369 !important;
+    margin-bottom: 10px !important;
+}
+
+#sidebar .text-center p {
+    font-size: 1rem !important;
+    color: #ddd !important;
+}
+
+/* Styling for the active link */
+.nav-link.active {
+    background-color: #393E46 !important;
+    color: #FFD369 !important;
+    font-weight: bold !important;
+}
+
+/* Sidebar toggle button */
+#toggleSidebar {
+    position: absolute !important;
+    top: 15px !important;
+    left: 15px !important;
+    z-index: 1000 !important;
+    background-color: #222831 !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.4rem !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2) !important;
+    transition: background-color 0.3s !important;
+    margin-top: 700px !important;
+}
+
+#toggleSidebar:hover {
+    background-color: #393E46 !important;
+}
+
+#toggleSidebar i {
+    margin-right: 8px !important;
+}
+
+/* Responsiveness for mobile view */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+
+    #content {
+        margin-left: 0 !important;
+        padding: 20px !important;
+        background-color: #393E46 !important;
+    }
+
+    #sidebar.active {
+        width: 250px !important;
+        box-shadow: 4px 0 18px rgba(0, 0, 0, 0.15) !important;
+        border-top-right-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
+    }
+
+    #content.active {
+        margin-left: 250px !important;
+    }
+
+    #toggleSidebar {
+        left: 10px !important;
+        top: 20px !important;
+    }
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    background-color: #405d77 !important;
+    color: #fff !important;
+    transform: translateX(5px) !important;
+}
+
+/* Content transition */
+#content {
+    transition: margin-left 0.4s ease, background-color 0.3s ease-in-out !important;
+}
+
+/* Adding animations for sidebar toggle */
+@keyframes slideIn {
+    from {
+        left: -300px !important;
+    }
+    to {
+        left: 0 !important;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: 0 !important;
+    }
+    to {
+        left: -300px !important;
+    }
+}
+
+
+.modal-content {
+    border-radius: 10px !important;
+    border: 1px solid #393E46 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 1rem !important;
+    max-width: 400px !important;
+    background-color: #222831 !important;
+}
+
+.modal-content .modal-header {
+    border-bottom: 1px solid #393E46 !important;
+    background-color: #393E46 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.modal-content .modal-title {
+    font-size: 1.125rem !important;
+    color: #fff !important;
+}
+
+.modal-content .btn-close {
+    background: none !important;
+    border: none !important;
+    color: #fff !important;
+    font-size: 1.25rem !important;
+}
+
+.modal-content .form-group {
+    margin-bottom: 1rem !important;
+}
+
+.modal-content .form-group label {
+    font-weight: 600 !important;
+    color: #fff !important;
+    margin-top: 20px !important;
+}
+
+.modal-content .form-control {
+    padding: 0.5rem !important;
+    font-size: 0.875rem !important;
+    border-radius: 8px !important;
+    border: 1px solid #393E46 !important;
+    transition: border-color 0.3s !important;
+    background-color: #222831 !important;
+    color: #fff !important;
+}
+
+.modal-content .form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5) !important;
+}
+
+.modal-content .btn-primary {
+    background-color: #393E46 !important;
+    border-color: #393E46 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+    transition: background-color 0.3s !important;
+    color: #fff !important;
+}
+
+.modal-content .btn-primary:hover {
+    background-color: #222831 !important;
+    border-color: #222831 !important;
+}
+
+.modal-content .btn-success {
+    border-radius: 8px !important;
+    font-size: 0.875rem !important;
+    padding: 0.5rem 1rem !important;
+    transition: background-color 0.3s !important;
+    color: #fff !important;
+}
+
+.modal-content .btn-success:hover {
+    background-color: #222831 !important;
+}
+
+@media (max-width: 576px) {
+    .modal-content .modal-dialog {
+        max-width: 90% !important;
+    }
+    .modal-content {
+        border-radius: 0 !important;
+    }
+}
+
+
+/* Styling untuk Tabel */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #393E46;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #393E46;
+    font-size: 1rem;
+}
+
+.table thead {
+    background-color: #222831;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #444B56;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #393E46;
+}
+
+.table tbody tr:hover {
+    background-color: #555E6D;
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+.table th {
+    background-color: #222831;
+    color: #fff;
+}
+
+/* Tombol pada Tabel */
+.table .btn {
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.table .btn:hover {
+    opacity: 0.8;
+}
+
+/* Tombol Lihat Kunci */
+.table .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.table .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Tombol Edit */
+.table .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.table .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+/* Tombol Hapus */
+.table .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.table .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+/* Button Tambah Kunci */
+.btn.mb-3 {
+    background-color: #6c757d;
+    border-color: #ffc107;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.btn.mb-3:hover {
+    background-color: #e0a800;
+    border-color: #6c757d;
+}
+
+#keyModal .modal-dialog {
+    max-width: 100% !important;  /* Mengatur modal dialog agar lebar sesuai layar */
+    width: 100% !important;      /* Memaksakan modal agar menggunakan lebar 100% */
+    margin: 0 auto !important;   /* Memastikan modal terpusat secara horizontal */
+    display: flex;               /* Gunakan flexbox untuk memudahkan penataan */
+    justify-content: center;     /* Menyusun modal secara horisontal di tengah */
+    align-items: center;         /* Menyusun modal secara vertikal di tengah */
+    height: 100vh;               /* Memastikan modal mengambil tinggi penuh dari layar */
+}
+
+#keyModal .modal-content {
+    border-radius: 10px !important;
+    border: 1px solid #393E46 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 1.5rem !important;
+    background-color: #222831 !important;
+    width: 100% !important;      /* Memastikan modal content menggunakan lebar 100% */
+    max-width: 1200px !important; /* Mengatur maksimal lebar menjadi 1200px */
+}
+
+#keyModal .modal-header {
+    border-bottom: 1px solid #393E46 !important;
+    background-color: #393E46 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    padding: 1rem;
+}
+
+#keyModal .modal-title {
+    font-size: 1.25rem !important;
+    color: #fff !important;
+}
+
+#keyModal .btn-close {
+    background: none !important;
+    border: none !important;
+    color: #fff !important;
+    font-size: 1.5rem !important;
+}
+
+#keyModal .modal-body {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+}
+
+#keyModal .modal-body p {
+    margin-bottom: 1rem;
+}
+
+#keyModal .modal-body strong {
+    font-weight: bold;
+    color: #fff !important;
+}
+
+#keyModal .modal-footer {
+    padding: 1rem;
+    justify-content: flex-start;
+}
+
+#keyModal .btn-secondary {
+    background-color: #393E46 !important;
+    border-color: #393E46 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    transition: background-color 0.3s !important;
+    color: #fff !important;
+}
+
+#keyModal .btn-secondary:hover {
+    background-color: #222831 !important;
+    border-color: #222831 !important;
+}
+
+
+/* Bootstrap Alert Styling */
+.alert {
+    background-color: #393E46 !important;
+    color: #f1f1f1 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.alert .btn-close {
+    background-color: #222831 !important;
+    color: #f1f1f1 !important;
+}
+
+.alert .btn-close:hover {
+    background-color: #F1F1F1 !important;
+    color: #222831 !important;
+}
+
+/* Success Alert Styling */
+.alert-success {
+    background-color: #4CAF50 !important;
+    color: #f1f1f1 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.alert-success .btn-close {
+    background-color: #4CAF50 !important;
+    color: #f1f1f1 !important;
+}
+
+.alert-success .btn-close:hover {
+    background-color: #F1F1F1 !important;
+    color: #4CAF50 !important;
+}
+
+/* Error Alert Styling */
+.alert-danger {
+    background-color: #F44336 !important;
+    color: #f1f1f1 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.alert-danger .btn-close {
+    background-color: #F44336 !important;
+    color: #f1f1f1 !important;
+}
+
+.alert-danger .btn-close:hover {
+    background-color: #F1F1F1 !important;
+    color: #F44336 !important;
+}
